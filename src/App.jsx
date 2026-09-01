@@ -1,11 +1,16 @@
-import React from 'react'
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
-const App = () => {
-  return (
-    <div>
-      Welcome to our gokuldhma society. main aatmaram tukaram bhide gokuldham society ka ekmevay secratory
-    </div>
-  )
+export default function App() {
+    return (
+        <>
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<Home />} />
+            </Routes>
+            <Footer />
+        </>
+    );
 }
-
-export default App
